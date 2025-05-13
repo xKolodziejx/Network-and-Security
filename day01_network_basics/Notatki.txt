@@ -1,0 +1,54 @@
+Day 01 – Network Basics
+
+Cel:
+Podstawowe komendy diagnostyczne sieci używane w systemie Windows.
+
+---
+
+Użyte polecenia:
+
+1. `ipconfig`
+
+-Opis: Wyświetla konfigurację sieci lokalnej.
+-Zastosowanie: Sprawdzanie adresu IP, bramy domyślnej, serwera DNS.
+
+---
+
+2. `ping 8.8.8.8`
+
+-Opis: Wysyła pakiety ICMP do wskazanego adresu IP.
+-Zastosowanie: Sprawdzenie, czy mamy połączenie z Internetem.
+-Przykład wyniku: 
+Reply from 8.8.8.8: bytes=32 time=18ms TTL=118
+
+---
+
+3. `tracert 8.8.8.8`
+
+-Opis: Śledzi trasę pakietu do hosta docelowego.
+-Zastosowanie: Diagnoza, gdzie może być przerwane połączenie.
+-Przykład wyniku:
+1 <1 ms 1 ms 1 ms 192.168.0.1
+2 15 ms 12 ms 11 ms 10.0.0.1
+3 20 ms 22 ms 19 ms 8.8.8.8
+
+---
+
+4. `nslookup onet.pl`
+
+-Opis: Wykonuje zapytanie DNS o wskazaną domenę.
+-Zastosowanie: Sprawdzenie, czy DNS działa poprawnie.
+-Przykład wyniku:
+Server: dns.google
+Address: 8.8.8.8
+
+Non-authoritative answer:
+Name: onet.pl
+Address: 213.180.141.140
+
+## Wnioski:
+- `ipconfig` pozwala sprawdzić lokalne ustawienia IP.
+- `ping` i `tracert` pokazują, czy mamy łączność i którędy leci pakiet.
+- `nslookup` daje odpowiedzi z DNS – kluczowy dla działania internetu.
+
+
